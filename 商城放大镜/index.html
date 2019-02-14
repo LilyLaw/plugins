@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>magnifier</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.origin{
+			position: absolute;
+			width: 400px;
+			left: 100px;
+			top: 100px;
+		}
+		.origin img{
+			width: 100%;
+			height: auto;
+		}
+
+		.magnifier{
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			display: none;
+			overflow: hidden;
+			left: 600px;
+			top: 100px;
+		}
+		.magnifier img{
+			position: absolute;
+			width: 1500px;
+			height: auto;
+		}
+		.floatbox{
+			position: absolute;
+			width: 120px;
+			height: 80px;
+			opacity: 0.5;
+			background: #fff;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="origin" id="orgimg">
+			<div class="floatbox" id="floatbox"></div>
+			<img src="./3.jpg" alt="origin img" >
+		</div>
+
+		<div class="magnifier" id="magbox">
+			<img src="./3.jpg" alt="magnifier img" id="bigimg">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var orgimg = document.getElementById("orgimg");
+			var magbox = document.getElementById("magbox");
+			var floatbox = document.getElementById("floatbox");
+			var bigimg = document.getElementById("bigimg");
+
+			// onmouseover show the img;
+			orgimg.onmouseover = function(){
+				magbox.style.display = "block";
+				floatbox.style.display = "block";
+			}
+
+			// onmouseout hide the img;
+			orgimg.onmouseout = function(){
+				magbox.style.display = "none";
+				floatbox.style.display = "none";
+			}
+
+			orgimg.onmousemove = function(event){
+				mouseX = event.clientX;
+				mouseY = event.clientY;
+				console.log(mouseY,mouseX);
+				floatboxtop = (mouseY - orgimg.offsetTop - parseFloat(floatbox.offsetWidth)/2);
+				floatboxleft = (mouseX - orgimg.offsetLeft - parseFloat(floatbox.offsetHeight)/2);
+
+				if(floatboxleft<0){
+					floatboxleft = 0;
+				}else if(floatboxleft>(orgimg.offsetWidth - floatbox.offsetWidth)){
+					floatboxleft = orgimg.offsetWidth - floatbox.offsetWidth
+				}
+
+				if(floatboxtop<0){
+					floatboxtop = 0;
+				}else if(floatboxtop>(orgimg.offsetHeight - floatbox.offsetHeight)){
+					floatboxtop = orgimg.offsetHeight - floatbox.offsetHeight
+				}
+
+				floatbox.style.top = floatboxtop + "px";
+				floatbox.style.left = floatboxleft + "px";
+
+				var bigleft = (parseFloat(bigimg.offsetWidth) - parseFloat(magbox.offsetWidth))*floatboxleft/(parseFloat(orgimg.offsetWidth)-parseFloat(floatbox.offsetWidth));
+				var bigtop = (parseFloat(bigimg.offsetHeight) - parseFloat(magbox.offsetHeight))*floatboxtop/(parseFloat(orgimg.offsetHeight)-parseFloat(floatbox.offsetHeight));
+
+				// move the opposite direction;
+				bigimg.style.left = -bigleft + "px";
+				bigimg.style.top = -bigtop + "px";
+			}
+		}
+	</script>
+</body>
+</html>
