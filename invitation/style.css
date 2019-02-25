@@ -63,5 +63,62 @@ html,body{
 	height: 35vh;
 	top:0;
 	left: 0;
-	background: green;
+}
+.page .first .starstatic .star1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60vw;
+	height: auto;
+}
+.page .first .starstatic .star2{
+	position: absolute;
+	top: 0;
+    right: -20vw;
+    width: 115vw;
+	height: auto;
+}
+.page .first .twofeather{
+	position: absolute;
+	top: 15vh;
+	left: 0;
+	width: 100vw;
+}
+.page .first .twofeather .shinning{
+	width: 60vw;
+	height: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 2;
+}
+.page .first .twofeather::before{
+    width: 55vw;
+    height: 55vh;
+    position: absolute;
+    content: "";
+    background: url(./img/feather3.png) no-repeat;
+    background-size: 100%;
+    left: 10vw;
+}
+.page .first .twofeather::after{
+    width: 55vw;
+    height: 55vh;
+    position: absolute;
+    content: "";
+    background: url(./img/feather2.png) no-repeat;
+    background-size: 100%;
+    right: 10vw;
+    top: 1vh;
+}
+.page .first .twofeather .font{
+    position: absolute;
+    width: 70vw;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 3vh;
+    margin: auto;
+    z-index: 3;
 }
