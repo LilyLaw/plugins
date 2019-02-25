@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+html,body{
+	height: 100vh;
+	overflow: hidden;
+}
+.page{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.page .bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.page .bg img{
+    height: 111vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    top: -6vh;
+    position: absolute;
+    left: -30vw;
+    animation: bgpage 2s linear 1;
+}
+
+@keyframes bgpage{
+	0%{
+		transform: scale(1.5);
+	}
+	35%{
+		transform: scale(0.95);
+	}
+	60%{
+		transform: scale(1.2);
+	}
+	78%{
+		transform: scale(0.95);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+.page .first{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.page .first .starstatic{
+	position: absolute;
+	width: 100%;
+	height: 35vh;
+	top:0;
+	left: 0;
+	background: green;
+}
