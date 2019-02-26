@@ -7,17 +7,18 @@ html,body{
 	height: 100vh;
 	overflow: hidden;
 }
-.page{
+.full{
 	width: 100%;
 	height: 100%;
+}
+.page{
 	position: relative;
 }
 .page .bg{
-	width: 100%;
-	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
+	opacity: 0.8;
 }
 .page .bg img{
     height: 111vh;
@@ -48,6 +49,11 @@ html,body{
 	}
 }
 
+
+/*page1*/
+#page1{
+	display: none;
+}
 .page1 .first{
 	/*width: 100%;*/
 	position: absolute;
@@ -367,4 +373,142 @@ html,body{
 		top: 28vh;
 		right: -7vw;
 	}
+}
+
+/*page2*/
+.page2 .bgpg2{
+	position: absolute;
+	z-index: 2;
+}
+.page2 .bgpg2 .bgimg:first-child{
+    width: 90vw;
+    height: auto;
+    position: absolute;
+    top: -5vw;
+    left: -68vw;
+    animation: antori 0.5s linear 1s 1 normal both running;
+    transform-origin: bottom right;
+}
+@keyframes antori{
+	0%{
+		transform: rotate(-40deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.page2 .bgpg2 .bgimg img{
+	width: 100%;
+	height: auto;
+}
+.page2 .bgpg2 .bgimg:nth-child(2){
+	width: 60vw;
+	height: auto;
+	position: absolute;
+	top: 5vw;
+	right: -5vw;
+	z-index: 2;
+    animation: tobig 1s linear 2s 1 normal both running;
+}
+
+.page2 .bgpg2 .bgimg:nth-child(3){
+	width: 80vw;
+	height: auto;
+	position: absolute;
+    bottom: -7vh;
+    right: -65vw;
+    animation: antole 0.5s linear 1.5s 1 normal both running;
+    transform-origin: bottom right;
+}
+@keyframes antole{
+	0%{
+		transform: rotate(20deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.page2 .bgpg2 .bgimg:nth-child(4){
+	width: 60vw;
+	height: auto;
+	position: absolute;
+	top: 50vh;
+    left: -20vw;
+    animation: tobig 1s linear 2.5s 1 normal both running;
+}
+.page2 .bgpg2 .bgimg:nth-child(5){
+	width: 65vw;
+    height: auto;
+    position: absolute;
+    top: 2vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(40deg);
+    z-index: 1;
+    animation: ferotabg 1.5s linear 2s 1 normal both running;
+    transform-origin: center;
+}
+@keyframes ferotabg{
+	0%{
+		opacity: 0;
+		transform: rotate(-180deg);
+	}
+	100%{
+		opacity: 1;
+    	transform: rotate(40deg);
+	}
+}
+.page2 .bgpg2 .bgimg:nth-child(6){
+	width: 65vw;
+    height: auto;
+    position: absolute;
+    top: 14vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+.page2 .bgpg2 .bgimg:last-child{
+	width: 30vw;
+	height: auto;
+	position: absolute;
+	bottom: 5vh;
+	left: 10vw;
+	transform: rotate(60deg);
+}
+.page2 .wedinfo{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 4;
+	top: 25vw;
+}
+.page2 .wedinfo .headline{
+	width: 60vw;
+	height: auto;
+    margin: 0 auto 5vw;
+}
+.page2 .wedinfo .headline img{
+	width: 100%;
+	height: auto;
+}
+.page2 .wedinfo .infofont{
+	width: 80vw;
+	margin: 0 auto 7vw;
+    text-align: center;
+    color: rgb(94, 50, 13);
+}
+.page2 .wedinfo .infofont .title{
+    width: 30vw;
+    height: 10vh;
+    margin: auto;
+	background: url('./img/bg2.png') no-repeat center;
+	background-size: 100%;
+    line-height: 10vh;
+    font-size: 1.4rem;
+}
+.page2 .wedinfo .infofont p{
+    line-height: 2;
+    font-size: 1.1rem;
 }
