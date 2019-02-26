@@ -48,43 +48,51 @@ html,body{
 	}
 }
 
-.page .first{
-	width: 100%;
-	height: 100%;
+.page1 .first{
+	/*width: 100%;*/
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 5;
+	/*top: 0;
+	left: 0;*/
 }
 
-.page .first .starstatic{
+.page1 .first .starstatic{
 	position: absolute;
 	width: 100%;
 	height: 35vh;
 	top:0;
 	left: 0;
 }
-.page .first .starstatic .star1{
+.page1 .first .starstatic .star1{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 60vw;
 	height: auto;
+	animation: tobig 1s linear 2s 1 normal both running;
 }
-.page .first .starstatic .star2{
+.page1 .first .starstatic .star2{
 	position: absolute;
 	top: 0;
-    right: -20vw;
+    /*right: -20vw;*/
     width: 115vw;
 	height: auto;
+	animation: tobig 1s linear 2s 1 normal both running;
 }
-.page .first .twofeather{
+@keyframes tobig{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.page1 .first .twofeather{
 	position: absolute;
 	top: 15vh;
 	left: 0;
 	width: 100vw;
 }
-.page .first .twofeather .shinning{
+.page1 .first .twofeather .shinning{
 	width: 60vw;
 	height: auto;
 	position: absolute;
@@ -93,7 +101,7 @@ html,body{
 	margin: auto;
 	z-index: 2;
 }
-.page .first .twofeather::before{
+.page1 .first .twofeather::before{
     width: 55vw;
     height: 55vh;
     position: absolute;
@@ -101,8 +109,22 @@ html,body{
     background: url(./img/feather3.png) no-repeat;
     background-size: 100%;
     left: 10vw;
+    z-index: 1;
+    animation: torighttop 1s linear 1s 1 normal both running;
 }
-.page .first .twofeather::after{
+@keyframes torighttop{
+	0%{
+		left: -75vw;
+		opacity: 0.5;
+		transform: rotate(-90deg);
+	}
+	100%{
+		left: 10vw;
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+}
+.page1 .first .twofeather::after{
     width: 55vw;
     height: 55vh;
     position: absolute;
@@ -111,8 +133,22 @@ html,body{
     background-size: 100%;
     right: 10vw;
     top: 1vh;
+    z-index: 1;
+    animation: tolefttop 1s linear 1s 1 normal both running;
 }
-.page .first .twofeather .font{
+@keyframes tolefttop{
+	0%{
+		right: -75vw;
+		opacity: 0.5;
+		transform: rotate(90deg);
+	}
+	100%{
+		right: 10vw;
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+}
+.page1 .first .twofeather .font{
     position: absolute;
     width: 70vw;
     height: auto;
@@ -121,4 +157,214 @@ html,body{
     top: 3vh;
     margin: auto;
     z-index: 3;
+    animation: fontscale 1s linear 1.5s 1 normal both running;
+}
+@keyframes fontscale{
+	0%{
+		transform: scaleY(0);
+	}
+	100%{
+		transform: scaleY(1);
+	}
+}
+.page1 .second{
+	position: absolute;
+	width: 100%;
+	top: 50vh;
+}
+.page1 .second .topstar{
+	position: absolute;
+	width: 100%;
+	animation: tobig 1s linear 2s 1 normal both running;
+}
+.page1 .second .topstar img{
+	width: 100%;
+	height: auto;
+}
+.page1 .second .fontname{
+	position: absolute;
+    top: 25vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50vw;
+    color: rgb(86, 40, 1);
+    font-size: 5vw;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+}
+ .page1 .second .fontname .groom{
+ 	animation: toptoleft 1s linear 2s 1 normal both running;
+	transform-origin: top right;
+ }
+ .page1 .second .fontname .bride{
+ 	animation: toptoright 1s linear 2s 1 normal both running;
+	transform-origin: top left;
+ }
+ @keyframes toptoleft{
+ 	0%{
+ 		opacity: 0;
+		transform: rotate(90deg);
+ 	}
+ 	100%{
+ 		opacity: 1;
+		transform: rotate(0deg);
+ 	}
+ }
+ @keyframes toptoright{
+ 	0%{
+ 		opacity: 0;
+		transform: rotate(-90deg);
+ 	}
+ 	100%{
+ 		opacity: 1;
+		transform: rotate(0deg);
+ 	}
+ }
+.page1 .second .fontname .midimg{
+	width: 18vw;
+	position: relative;
+}
+.page1 .second .fontname .midimg .fontbg{
+	width: 100%;
+	height: auto;
+	position: absolute;
+    top: -0.5vh;
+    animation: tobotbg 1.5s linear 1.5s 1 normal both running;
+}
+@keyframes tobotbg{
+	0%{
+		opacity: 0;
+		top: -5vh;
+		transform: scale(0.8);
+	}
+	100%{
+		opacity: 1;
+		top: -0.5vh;
+		transform: scale(1);
+	}
+}
+.page1 .second .fontname .midimg .fontfend{
+	width: 60%;
+	height: auto;
+	position: absolute;
+	top: -3vh;
+	right: 0;
+	left: 0;
+	margin: auto;
+	animation: toffbig 1s linear 2s 1 normal both running;
+}
+@keyframes toffbig{
+	0%{
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.page1 .second .weddate{
+    position: absolute;
+    top: 32vh;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 50vw;
+    height: 9vh;
+    text-align: center;
+    font-size: 4.5vw;
+    color: rgb(86, 40, 1);
+    letter-spacing: 0.2vw;
+    z-index: 2;
+
+}
+.page1 .second .weddate p:nth-child(1){
+	position: absolute;
+	top:  0.75vh;
+	left: 0;
+	right: 0;
+	margin: auto;
+	animation: toptobot 1s linear 2s 1 normal both running;
+}
+.page1 .second .weddate p:nth-child(2){
+	position: absolute;
+	bottom: 0.75vh;
+	animation: bottotop 1s linear 2s 1 normal both running;
+}
+@keyframes toptobot{
+	0%{
+		opacity: 0;
+		top: -3vh;
+	}
+	100%{
+		opacity: 1;
+		top: 0.75vh;
+	}
+}
+@keyframes bottotop{
+	0%{
+		opacity: 0;
+		bottom: -3vh;
+	}
+	100%{
+		opacity: 1;
+		bottom: 0.75vh;
+	}
+}
+.page1 .second .bottomstar{
+	position: absolute;
+    top: 23vh;
+    animation: tobig 1s linear 2s 1 normal both running;
+}
+.page1 .second .bottomstar img{
+    width: 50%;
+    height: auto;
+    margin: 8vh 0 0 20vw;
+}
+.page1 .second::before{
+	position: absolute;
+    top: 27vh;
+    left: -7vw;
+    width: 50vw;
+    content: "";
+    height: 20vh;
+    background: url(./img/feather1.png) no-repeat;
+    background-size: 100%;
+    transform: rotate(50deg);
+    animation: fetoright 1s linear 2s 1 normal both running;
+}
+.page1 .second::after{
+    position: absolute;
+    top: 28vh;
+    right: -7vw;
+    width: 50vw;
+    content: "";
+    height: 20vh;
+    background: url(./img/feather1.png) no-repeat;
+    background-size: 100%;
+    transform: rotate(220deg);
+    animation: fetoleft 1s linear 2s 1 normal both running;
+}
+@keyframes fetoright{
+	0%{
+		top: 14vh;
+		left: -50vw;
+	}
+	100%{
+		top: 28vh;
+		left: -7vw;
+	}
+}
+@keyframes fetoleft{
+	0%{
+		top: 40vh;
+		right: -50vw;
+	}
+	100%{
+		top: 28vh;
+		right: -7vw;
+	}
 }
