@@ -52,7 +52,7 @@ html,body{
 
 /*page1*/
 #page1{
-	display: none;
+	/*display: none;*/
 }
 .page1 .first{
 	/*width: 100%;*/
@@ -340,7 +340,7 @@ html,body{
     background: url(./img/feather1.png) no-repeat;
     background-size: 100%;
     transform: rotate(50deg);
-    animation: fetoright 1s linear 2s 1 normal both running;
+    animation: fetoright 2s linear 2s 1 normal both running;
 }
 .page1 .second::after{
     position: absolute;
@@ -352,7 +352,7 @@ html,body{
     background: url(./img/feather1.png) no-repeat;
     background-size: 100%;
     transform: rotate(220deg);
-    animation: fetoleft 1s linear 2s 1 normal both running;
+    animation: fetoleft 2s linear 2s 1 normal both running;
 }
 @keyframes fetoright{
 	0%{
@@ -376,6 +376,9 @@ html,body{
 }
 
 /*page2*/
+#page2{
+	display: none;
+}
 .page2 .bgpg2{
 	position: absolute;
 	z-index: 2;
@@ -539,5 +542,27 @@ html,body{
 	100%{
 		opacity: 1;
 		margin-top: 0;
+	}
+}
+
+/*audio*/
+.audiobox{
+    width: 10vw;
+    height: 10vw;
+    background: url(./img/audio.png) no-repeat center center;
+    background-size: 100%;
+    position: fixed;
+    top: 2vh;
+    right: 2vw;
+}
+.audiorotate{
+	animation: rotaudio 2s linear infinite;
+}
+@keyframes rotaudio{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
 	}
 }
