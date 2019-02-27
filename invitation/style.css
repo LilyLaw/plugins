@@ -408,7 +408,7 @@ html,body{
 	top: 5vw;
 	right: -5vw;
 	z-index: 2;
-    animation: tobig 1s linear 2s 1 normal both running;
+    animation: tobig 2s linear 2s 1 normal both running;
 }
 
 .page2 .bgpg2 .bgimg:nth-child(3){
@@ -434,7 +434,7 @@ html,body{
 	position: absolute;
 	top: 50vh;
     left: -20vw;
-    animation: tobig 1s linear 2.5s 1 normal both running;
+    animation: tobig 2s linear 3s 1 normal both running;
 }
 .page2 .bgpg2 .bgimg:nth-child(5){
 	width: 65vw;
@@ -488,6 +488,7 @@ html,body{
 	width: 60vw;
 	height: auto;
     margin: 0 auto 5vw;
+    animation: tobig 1.5s linear 1s 1 normal both running;
 }
 .page2 .wedinfo .headline img{
 	width: 100%;
@@ -511,4 +512,32 @@ html,body{
 .page2 .wedinfo .infofont p{
     line-height: 2;
     font-size: 1.1rem;
+}
+.page2 .wedinfo .infofont:nth-child(2) .title{
+    animation: tobig 2s linear 1s 1 normal both running;
+}
+.page2 .wedinfo .infofont:nth-child(3) .title{
+    animation: tobig 2s linear 2s 1 normal both running;
+}
+.page2 .wedinfo .infofont:last-child .title{
+    animation: tobig 2s linear 3s 1 normal both running;
+}
+.page2 .wedinfo .infofont:nth-child(2) p{
+    animation: ptobot 2s linear 1.5s 1 normal both running;
+}
+.page2 .wedinfo .infofont:nth-child(3) p{
+    animation: ptobot 2s linear 2.5s 1 normal both running;
+}
+.page2 .wedinfo .infofont:last-child p{
+    animation: ptobot 2s linear 3.5s 1 normal both running;
+}
+@keyframes ptobot{
+	0%{
+		opacity: 0;
+		margin-top: -5vh;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 0;
+	}
 }
