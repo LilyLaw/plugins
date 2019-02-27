@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	border: none;
+    color: rgb(86, 40, 1);
 }
 html,body{
 	height: 100vh;
@@ -11,8 +12,23 @@ html,body{
 	width: 100%;
 	height: 100%;
 }
+.posauto{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+@keyframes tobig{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
 .page{
 	position: relative;
+	overflow: hidden;
 }
 .page .bg{
 	position: absolute;
@@ -52,7 +68,7 @@ html,body{
 
 /*page1*/
 #page1{
-	/*display: none;*/
+	display: none;
 }
 .page1 .first{
 	/*width: 100%;*/
@@ -84,14 +100,6 @@ html,body{
 	height: auto;
 	animation: tobig 1s linear 2s 1 normal both running;
 }
-@keyframes tobig{
-	0%{
-		transform: scale(0);
-	}
-	100%{
-		transform: scale(1);
-	}
-}
 .page1 .first .twofeather{
 	position: absolute;
 	top: 15vh;
@@ -101,10 +109,6 @@ html,body{
 .page1 .first .twofeather .shinning{
 	width: 60vw;
 	height: auto;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
 	z-index: 2;
 }
 .page1 .first .twofeather::before{
@@ -155,13 +159,9 @@ html,body{
 	}
 }
 .page1 .first .twofeather .font{
-    position: absolute;
     width: 70vw;
     height: auto;
-    left: 0;
-    right: 0;
     top: 3vh;
-    margin: auto;
     z-index: 3;
     animation: fontscale 1s linear 1.5s 1 normal both running;
 }
@@ -188,13 +188,8 @@ html,body{
 	height: auto;
 }
 .page1 .second .fontname{
-	position: absolute;
     top: 25vh;
-    left: 0;
-    right: 0;
-    margin: auto;
     width: 50vw;
-    color: rgb(86, 40, 1);
     font-size: 5vw;
     line-height: 1.6;
     display: flex;
@@ -255,11 +250,7 @@ html,body{
 .page1 .second .fontname .midimg .fontfend{
 	width: 60%;
 	height: auto;
-	position: absolute;
 	top: -3vh;
-	right: 0;
-	left: 0;
-	margin: auto;
 	animation: toffbig 1s linear 2s 1 normal both running;
 }
 @keyframes toffbig{
@@ -273,26 +264,17 @@ html,body{
 	}
 }
 .page1 .second .weddate{
-    position: absolute;
     top: 32vh;
-    margin: auto;
-    left: 0;
-    right: 0;
     width: 50vw;
     height: 9vh;
     text-align: center;
     font-size: 4.5vw;
-    color: rgb(86, 40, 1);
     letter-spacing: 0.2vw;
     z-index: 2;
 
 }
 .page1 .second .weddate p:nth-child(1){
-	position: absolute;
 	top:  0.75vh;
-	left: 0;
-	right: 0;
-	margin: auto;
 	animation: toptobot 1s linear 2s 1 normal both running;
 }
 .page1 .second .weddate p:nth-child(2){
@@ -442,11 +424,7 @@ html,body{
 .page2 .bgpg2 .bgimg:nth-child(5){
 	width: 65vw;
     height: auto;
-    position: absolute;
     top: 2vw;
-    left: 0;
-    right: 0;
-    margin: auto;
     transform: rotate(40deg);
     z-index: 1;
     animation: ferotabg 1.5s linear 2s 1 normal both running;
@@ -465,11 +443,7 @@ html,body{
 .page2 .bgpg2 .bgimg:nth-child(6){
 	width: 65vw;
     height: auto;
-    position: absolute;
     top: 14vw;
-    left: 0;
-    right: 0;
-    margin: auto;
     z-index: 1;
 }
 .page2 .bgpg2 .bgimg:last-child{
@@ -564,5 +538,181 @@ html,body{
 	}
 	100%{
 		transform: rotate(360deg);
+	}
+}
+
+/*page3*/
+#page3{
+	/*display: none;*/
+}
+.page3 .subsidary{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    z-index: 4;
+}
+.page3 .subsidary img:first-child{
+	width: 60vw;
+	height: auto;
+	animation: tobig 1.5s linear 1s 1 normal both running;
+}
+.page3 .subsidary img:nth-child(2){
+	width: 90vw;
+    height: auto;
+    position: absolute;
+    top: -5vh;
+    left: -65vw;
+    transform: rotate(-10deg);
+    animation: trp3tori 0.5s linear 2.5s 1 normal both running;
+	transform-origin: bottom left;
+}
+@keyframes trp3tori{
+	0%{
+		transform: rotate(-26deg);
+	}
+	100%{
+		transform: rotate(-10deg);
+	}
+}
+.page3 .subsidary img:nth-child(3){
+	width: 80vw;
+    height: auto;
+    position: absolute;
+    bottom: -8vh;
+    right: -63vw;
+    animation: trp3tole 1s linear 3s 1 normal both running;
+	transform-origin: bottom right;
+}
+@keyframes trp3tole{
+	0%{
+		transform: rotate(22deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.page3 .subsidary img:nth-child(4){
+    position: absolute;
+	right: -5vw;
+    transform: rotate(-50deg);
+    width: 35vw;
+    height: auto;
+    top: 15vh;
+    animation: ro240deg 2.2s linear 1s 1 normal both running;
+}
+@keyframes ro240deg{
+	0%{
+		opacity: 0;
+		transform: rotate(-240deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotate(-50deg);
+	}
+}
+.page3 .subsidary img:last-child{
+    position: absolute;
+    left: -35vw;
+    transform: rotate(55deg);
+    width: 45vw;
+    height: auto;
+    bottom: 20vh;
+    animation: besro 2s linear 1.5s 1 normal both running;
+	transform-origin: bottom right;
+}
+@keyframes besro{
+	0%{
+		opacity: 0;
+		transform: rotate(120deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotate(55deg);
+	}
+}
+.page3 .p3con{
+	position: absolute;
+	width: 100%;
+}
+.page3 .p3con .both{
+	width: 100%;
+	height: auto;
+	animation: toopbig 2s linear 1s 1 normal both running;
+}
+@keyframes toopbig{
+	0%{
+		opacity: 0;
+		transform: scale(0);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.page3 .p3con .groomtitle{
+	width: 100%;
+	height: auto;
+	margin-top: -7vh;
+	position: relative;
+}
+.page3 .p3con .groomtitle img:first-child{
+	width: 70vw;
+	height: auto;
+	top: 0;
+	z-index: 1;
+	animation: spread 1.5s linear 2s 1 normal both running;
+}
+@keyframes spread{
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleY(1);
+	}
+}
+.page3 .p3con .groomtitle img:nth-child(2){
+    width: 50vw;
+    height: auto;
+    top: 3vh;
+    z-index: 2;
+    animation: toopbig 1.5s linear 2.5s normal both running;
+}
+.page3 .p3con .groomtitle img:nth-child(2){
+    width: 50vw;
+    height: auto;
+    top: 3vh;
+    z-index: 2;
+}
+.page3 .p3con .groomtitle img:nth-child(3){
+    width: 70vw;
+    height: auto;
+    top: -1vh;
+    z-index: 3;
+}
+
+.page3 .p3con .groomtitle .grwordfont{
+	top: 15vh;
+	width: 50vw;
+	height: 5vh;
+	display: flex;
+    align-items: center;
+}
+.page3 .p3con .groomtitle .grwordfont img{
+	width: 13vw;
+	height: auto;
+}
+.page3 .p3con .groomtitle .grwordfont span{
+	font-size: 1.3rem;
+	animation: ro90degtl 1.5s linear 2.5s 1 normal both running;
+	transform-origin: center right;
+}
+@keyframes ro90degtl{
+	0%{
+		opacity: 0;
+		transform: rotate(90deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotate(0deg);
 	}
 }
